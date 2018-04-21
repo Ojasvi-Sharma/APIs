@@ -1,0 +1,26 @@
+<html> 
+
+<head>
+<title>SVHN Model as a Flask API</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+
+    <h1>Google Street View House Number Predictor</h1>
+
+    <form action="/predict" method="post" enctype="multipart/form-data">
+      <input type="text" name="time" value="Time">
+      <input type="text" name="times" value="TimeS">
+      <input type="text" name="ta" value="Ta">
+      <input type="text" name="rs" value="Rs">
+      <input type="text" name="tin_windavg" value="Tin_windAVG">
+      <input type="text" name="tin_dooravg" value="Tin_doorAVG">
+      <input type="text" name="setpoint" value="SetPoint">
+      <input type="submit" value="Predict"> {% if label %} {{ label }} {% endif %}
+    </form>
+
+</body>
+
+</html>
